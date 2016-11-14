@@ -1,0 +1,838 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ControlesCom
+</name>
+</assembly>
+<members>
+<member name="P:ControlesCom.My.Resources.LocAffichage.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocAffichage.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocAffichage.StartAffTrace">
+	<summary>
+  Recherche une chaîne localisée semblable à Démarrer affichage.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocAffichage.StopAffTrace">
+	<summary>
+  Recherche une chaîne localisée semblable à Arréter affichage.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocAffichage">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="M:ControlesCom.Automatisme.Bit(System.Int16,System.Int32)">
+	<summary>
+ Test l'etat d'un bit de mot (entier signé 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<returns>Etat du bit</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.SetBit(System.Int16@,System.Int32,System.Boolean)">
+	<summary>
+ Set ou Reset d'un bit de mot (entier signé de 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé de 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<param name="etat">Etat du bit</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.LoByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids faible d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids faible</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.ULoByte(System.UInt16)">
+	<summary>
+ Retourne l'octet de poids faible d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier non signé de 16 bits)</param>
+	<returns>Octet de poids faible</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.HiByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids FORT d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids FORT</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.UHiByte(System.UInt16)">
+	<summary>
+ Retourne l'octet de poids FORT d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier non signé de 16 bits)</param>
+	<returns>Octet de poids FORT</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.ByteToWord(System.Byte,System.Byte)">
+	<summary>
+ Constituation d'un mot a partir de deux octets
+ </summary>
+	<param name="hi">Octet de poids faible</param>
+	<param name="lo">Octet de poids FAIBLE</param>
+	<returns>Mot signé de 16 bits</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.ByteToString(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau d'octets.
+ </summary>
+	<param name="tableau">Tableau d'octets</param>
+	<param name="debut">Premier octet de la chaine a extraire</param>
+	<param name="longueur">Nombre d'octets a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.WordToString(System.Int16[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau de mots (int16).
+ </summary>
+	<param name="tableau">Tableau de mots (int16)</param>
+	<param name="debut">Premier mot de la chaine a extraire</param>
+	<param name="longueur">Nombre de mots a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.StringToWord(System.String,System.Int16[]@,System.Int32,System.Int32)">
+	<summary>
+ Ecriture d'une chaine de caratere dans un tableau de mots
+ </summary>
+	<param name="chaine">Chaine de caractére</param>
+	<param name="tableau">Tableau de mots</param>
+	<param name="debut">Premier mot a utiliser</param>
+	<param name="longueur">Nombre de mots a utiliser</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.Hex2(System.Byte)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 2 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.Hex4(System.Int16)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 4 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.Automatisme.Hex8(System.Int32)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 8 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="P:ControlesCom.ComTcpClientAscii.AdresseIP">
+	<summary>
+ Adresse IP
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Connecter">
+	<summary>
+ Permet de se connecter au serveur
+ </summary>
+	<returns>True si la connexion s'est bien déroulée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Deconnecter">
+	<summary>
+ Permet de se déconnecter du serveur
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Envoyer(System.String,System.String@,System.Int32)">
+	<summary>
+ Envoi d'une chaine de caractére et attente d'une réponse
+ </summary>
+	<param name="envoi">Chaine de caractéres a envoyer</param>
+	<param name="reception">Chaine de caractéres recue</param>
+	<param name="timeout">Temps d'attente de la réponse maxi en ms</param>
+	<returns>True si la communication s'est bien déroulée, et qu'une réponse a été recue</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Envoyer(System.Byte[],System.Int32,System.Byte[]@,System.Int32@,System.Int32)">
+	<summary>
+ Envoi d'un tableau d'octet et attente d'une réponse
+ </summary>
+	<param name="envoi">Tableau d'octet a envoyer</param>
+	<param name="nbOctetEnvoi">Nombre d'octets a envoyer</param>
+	<param name="reception">Tableau d'octet recu</param>
+	<param name="nbOctetReception">Nombre d'octets recus</param>
+	<param name="timeout">Temps d'attente de la réponse maxi en ms</param>
+	<returns>True si la communication s'est bien déroulée, et qu'une réponse a été recue</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Envoyer(System.String,System.Int32)">
+	<summary>
+ Envoi d'une chaine de caractére sans attente de réponse
+ </summary>
+	<param name="envoi">Chaine de caractéres a envoyer</param>
+	<param name="timeout">Temps d'attente de la réponse maxi en ms</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpClientAscii.Envoyer(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Envoi d'un tableau d'octet sans attente de réponse
+ </summary>
+	<param name="envoi">Tableau d'octet a envoyer</param>
+	<param name="nbOctetEnvoi">Nombre d'octets a envoyer</param>
+	<param name="timeout">Temps d'attente de la réponse maxi en ms</param>
+	<remarks></remarks>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.EcrireMots">
+	<summary>
+  Recherche une chaîne localisée semblable à Ecriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.EcrireMotsErrAdresse">
+	<summary>
+  Recherche une chaîne localisée semblable à Adresse non utilisable écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.EcrireMotsErrCodeErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Code erreur retourné écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.EcrireMotsErrFormat">
+	<summary>
+  Recherche une chaîne localisée semblable à Réponse mal formatée écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.EcrireMotsRequInc">
+	<summary>
+  Recherche une chaîne localisée semblable à Code requête inconnu écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.LireMots">
+	<summary>
+  Recherche une chaîne localisée semblable à Lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.LireMotsErrAdresse">
+	<summary>
+  Recherche une chaîne localisée semblable à Adresse non utilisable lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.LireMotsErrCodeErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Code erreur retourné lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.LireMotsErrFormat">
+	<summary>
+  Recherche une chaîne localisée semblable à Réponse mal formatée lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocClientmodbus.LireMotsRequInc">
+	<summary>
+  Recherche une chaîne localisée semblable à Code requête inconnu lecture %MW.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocClientmodbus">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.ComErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur communication.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.ComOK">
+	<summary>
+  Recherche une chaîne localisée semblable à Echanges ok.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.EcrireMots">
+	<summary>
+  Recherche une chaîne localisée semblable à Ecriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.EcrireMotsErrAdresse">
+	<summary>
+  Recherche une chaîne localisée semblable à Adresse non utilisable écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.EcrireMotsErrCodeErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Code erreur retourné écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.EcrireMotsErrFormat">
+	<summary>
+  Recherche une chaîne localisée semblable à Réponse mal formatée écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.EcrireMotsRequInc">
+	<summary>
+  Recherche une chaîne localisée semblable à Code requête inconnu écriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.LireMots">
+	<summary>
+  Recherche une chaîne localisée semblable à Lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.LireMotsErrAdresse">
+	<summary>
+  Recherche une chaîne localisée semblable à Adresse non utilisable lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.LireMotsErrCodeErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Code erreur retourné lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.LireMotsErrFormat">
+	<summary>
+  Recherche une chaîne localisée semblable à Réponse mal formatée lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComModbus.LireMotsRequInc">
+	<summary>
+  Recherche une chaîne localisée semblable à Code requête inconnu lecture %MW.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocComModbus">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.ArretServeur">
+	<summary>
+  Recherche une chaîne localisée semblable à Serveur arrêté.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.ArretServeurErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur lors de l'arret du serveur.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.AttenteConnexion">
+	<summary>
+  Recherche une chaîne localisée semblable à Attente connexion.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.AucuneConnect">
+	<summary>
+  Recherche une chaîne localisée semblable à Aucune connection .
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.ConnexionOk">
+	<summary>
+  Recherche une chaîne localisée semblable à Connexion établie.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.CreationServeur">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur lancement serveur.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpServer.DemandeDeconnect">
+	<summary>
+  Recherche une chaîne localisée semblable à Demande de deconnection du client.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocTcpServer">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComTrumark.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComTrumark.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComTrumark.ErreurCom">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur communication.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComTrumark.ErreurTag">
+	<summary>
+  Recherche une chaîne localisée semblable à Trame recue mal formatée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComTrumark.Ok">
+	<summary>
+  Recherche une chaîne localisée semblable à Echanges ok.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocComTrumark">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="M:ControlesCom.ComAffichage.AffEtat(System.String,System.String)">
+	<summary>
+ Affichage de l'etat de la communication
+ </summary>
+	<param name="etat">Message a afficher dans le controle</param>
+	<param name="trace">Message a ajouter dans la fenetre de debug</param>
+	<remarks>Si trace n'est pas utilisé la valeur de etat sera utilisée pour la fenetre de debug</remarks>
+</member><member name="M:ControlesCom.ComAffichage.AffErreur(System.String,System.String)">
+	<summary>
+ Affichage de l'etat de la communication en cas d'erreur
+ </summary>
+	<param name="etat">Message a afficher dans le controle</param>
+	<param name="trace">Message a ajouter dans la fenetre de debug</param>
+	<remarks>Si trace n'est pas utilisé la valeur de etat sera utilisée pour la fenetre de debug</remarks>
+</member><member name="P:ControlesCom.ComAffichage.NomFenetreDebug">
+	<summary>
+ Nom de la fenetre de trace des evenements de communication
+ </summary>
+	<value>Nom de la fenetre</value>
+	<returns>Nom de la fenetre</returns>
+	<remarks></remarks>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.Cmd_Err_GJ_2">
+	<summary>
+  Recherche une chaîne localisée semblable à Le JOB courant doit être sauvegardé.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_Gx_1">
+	<summary>
+  Recherche une chaîne localisée semblable à Cellule ID invalide.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_Gx_2">
+	<summary>
+  Recherche une chaîne localisée semblable à La commande ne peut être éxecutée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SE_1">
+	<summary>
+  Recherche une chaîne localisée semblable à Identificateur d'évènement incorrect.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SE_2">
+	<summary>
+  Recherche une chaîne localisée semblable à La commande ne peut être exécutée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SE_6">
+	<summary>
+  Recherche une chaîne localisée semblable à Droits d'utilisateur insuffisants.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SJ_1">
+	<summary>
+  Recherche une chaîne localisée semblable à Commande mal formatée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SJ_2">
+	<summary>
+  Recherche une chaîne localisée semblable à Job inexistant ou caméra en ligne.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SJ_4">
+	<summary>
+  Recherche une chaîne localisée semblable à Dépassement mémoire Insight.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SJ_6">
+	<summary>
+  Recherche une chaîne localisée semblable à Droits d'utilisateur insuffisants.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SO_1">
+	<summary>
+  Recherche une chaîne localisée semblable à Paramètre incorrect.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SO_2">
+	<summary>
+  Recherche une chaîne localisée semblable à La commande ne peut être éxecutée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SO_5">
+	<summary>
+  Recherche une chaîne localisée semblable à Caméra mise offline manuellement.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_SO_6">
+	<summary>
+  Recherche une chaîne localisée semblable à Droits d'utilisateur insuffisants.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_Sx_1">
+	<summary>
+  Recherche une chaîne localisée semblable à Commande mal formatée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_Sx_2">
+	<summary>
+  Recherche une chaîne localisée semblable à Valeur incorrecte.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdErr_Sx_6">
+	<summary>
+  Recherche une chaîne localisée semblable à Droits d'utilisateur insuffisants.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.CmdNonReconnue">
+	<summary>
+  Recherche une chaîne localisée semblable à Commande non reconnue.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.ComErrInconnue">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur inconnue.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.ComOk">
+	<summary>
+  Recherche une chaîne localisée semblable à Echanges ok.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocComInsight.ErreurCom">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur communication.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocComInsight">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.ComErreur">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur communication.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.ComOk">
+	<summary>
+  Recherche une chaîne localisée semblable à Echanges OK.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.Ecriture">
+	<summary>
+  Recherche une chaîne localisée semblable à Ecriture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.Lecture">
+	<summary>
+  Recherche une chaîne localisée semblable à Lecture %MW.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.NonSupportee">
+	<summary>
+  Recherche une chaîne localisée semblable à non supportée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.Requete">
+	<summary>
+  Recherche une chaîne localisée semblable à Requête.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.TrameNonModbus">
+	<summary>
+  Recherche une chaîne localisée semblable à Trame recue non conforme ModBus.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.TrameNonUTE">
+	<summary>
+  Recherche une chaîne localisée semblable à Trame recue en protocole inconnu.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocServeurModbus.TrameUTE">
+	<summary>
+  Recherche une chaîne localisée semblable à Trame recue en protocole UTE.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocServeurModbus">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="M:ControlesCom.ServeurModbus.LireMot(System.Int32)">
+	<summary>
+ Lecture de la valeur d'un mot de la zone mémoire
+ </summary>
+	<param name="adr">Adresse du mot</param>
+	<returns>Valeur du mot</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ServeurModbus.EcrireMot(System.Int32,System.Int16)">
+	<summary>
+ Ecriture de la valeur d'un mot dans la zone mémoire
+ </summary>
+	<param name="adr">Adresse du mot</param>
+	<param name="val">Valeur du mot</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ServeurModbus.SetDeclencheur(System.Int32,System.Boolean)">
+	<summary>
+ Demande de déclenchement d'un événement lors de la modification d'un mot
+ de la mémoire 'PC'
+ </summary>
+	<param name="adr">Adresse du mot</param>
+	<param name="val">TRUE si déclenchement d'événement a réaliser</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.EnvoyerTag(System.UInt32,System.String)">
+	<summary>
+ Envoi d'une commande Trumark
+ </summary>
+	<param name="tag">Numero du TAG de la commande (voir documentation TLV)</param>
+	<param name="arg">Arguments de la commande</param>
+	<returns>Chaine de caractére renvoyée par Trumark (voir dcoumentation TLV)</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.EtatLaser">
+	<summary>
+ Retourne l'etat courant du laser
+ </summary>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.NouveauFichier">
+	<summary>
+ Création d'un nouveau fichier pour edition
+ </summary>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.ChargerFichier(System.String)">
+	<summary>
+ Chargement d'un fichier pour marquage
+ </summary>
+	<param name="name"></param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.EnregistrerFichier(System.String)">
+	<summary>
+ Enregistrement du fichier en cours d'edition
+ </summary>
+	<param name="name">Nom du fichier</param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.Variable(System.String,System.String)">
+	<summary>
+ Changement de la valeur d'une variable dans le fichier en cours
+ </summary>
+	<param name="name">Nom de la variable</param>
+	<param name="value">Nouvelle valeur</param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.AjouterVLF(System.String,System.String,System.Double,System.Double)">
+	<summary>
+ Ajouter un fichier VLF au fichier en cours d'edition
+ </summary>
+	<param name="fichier">Nom du fichier VLF a ajouter</param>
+	<param name="paramLaser">Parametre laser a appliquer (option)</param>
+	<param name="X">Position X</param>
+	<param name="Y">Position Y</param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.AjouterTexteExt(System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ Ajouter un texte au fichier en cours d'edition (avec prise en compte des espaces [] )
+ </summary>
+	<param name="texte">Texte a ajouter</param>
+	<param name="paramLaser">Parametre laser a utiliser</param>
+	<param name="font">Nom de la police de caractère</param>
+	<param name="X">Position X du texte</param>
+	<param name="Y">Position Y du texte</param>
+	<param name="taille">Taille du texte</param>
+	<param name="angle">Angle d'ecriture du texte</param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTrumark.EnvoyerElmtTexteSimple(System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ Ajouter un texte au fichier en cours d'edition (sans prise en compte des espaces [] )
+ </summary>
+	<param name="texte">Texte a ajouter</param>
+	<param name="paramLaser">Parametre laser a utiliser</param>
+	<param name="font">Nom de la police de caractère</param>
+	<param name="X">Position X du texte</param>
+	<param name="Y">Position Y du texte</param>
+	<param name="taille">Taille du texte</param>
+	<param name="angle">Angle d'ecriture du texte</param>
+	<returns>True si la fonction a été correctement executée</returns>
+	<remarks></remarks>
+</member><member name="P:ControlesCom.ComInSight.User">
+	<summary>
+ Nom d'utilisateur InSight
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ControlesCom.ComInSight.Password">
+	<summary>
+ Password InSight
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetFloat(System.String@,System.Double@)">
+	<summary>
+ Attribution d'une valeur de type flotant a une cellule
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Valeur à ecrire</param>
+	<returns>Vrai si l'écriture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetInt(System.String@,System.Int16@)">
+	<summary>
+ Attribution d'une valeur de type entier a une cellule
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Valeur à ecrire</param>
+	<returns>Vrai si l'écriture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetString(System.String@,System.String@)">
+	<summary>
+ Attribution d'une chaine de caractére a une cellule
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Chaine à ecrire</param>
+	<returns>Vrai si l'écriture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.GetFloat(System.String@,System.Double@)">
+	<summary>
+ Lecture d'une valeur de type flotant dans une cellule 
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Contenu de la la cellule</param>
+	<returns>Vrai si la lecture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.GetInt(System.String@,System.Int16@)">
+	<summary>
+ Lecture d'une valeur de type entier dans une cellule 
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Contenu de la la cellule</param>
+	<returns>Vrai si la lecture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.GetString(System.String@,System.String@)">
+	<summary>
+ Lecture d'une chaine de caractére dans une cellule 
+ </summary>
+	<param name="cell">Cellule au format A2</param>
+	<param name="valeur">Contenu de la la cellule</param>
+	<returns>Vrai si la lecture s'est bien passée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetJob(System.Int16@)">
+	<summary>
+ Changement de job
+ </summary>
+	<param name="idJob">Identifiant du Job a utiliser</param>
+	<returns>Vrai si le changement s'est bien passé</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.GetJob(System.Int16@)">
+	<summary>
+ Lecture de l'identifiant du Job en cours
+ </summary>
+	<param name="idJob">Retourne l'identifiant du Job dans cette variable</param>
+	<returns>Vrai si la commande s'est éxécutée sans erreur</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetOnline(System.Boolean@)">
+	<summary>
+ Mise en ligne ou hors ligne de la camera
+ </summary>
+	<param name="online">Vrai pour mettre en ligne, Faux pour mettre hors ligne</param>
+	<returns>Vrai si la commande s'est éxécutée sans erreur</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.GetOnline(System.Boolean@)">
+	<summary>
+ Test si la camera est en ligne
+ </summary>
+	<param name="online">Retourne vrai dans cette variable si la caméra est en ligne</param>
+	<returns>Vrai si la commande s'est éxécutée sans erreur</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.SetEvent(System.Int32@)">
+	<summary>
+ Declencher un événement
+ </summary>
+	<param name="idEvent">Numéro de l'événement</param>
+	<returns>Vrai si la commande s'est éxécutée sans erreur</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComInSight.Reboot">
+	<summary>
+ Reboot de la caméra
+ </summary>
+	<returns>Vrai si l'envoi de la commande s'est éxécutée sans erreur</returns>
+	<remarks>Attention durant le reboot le dialogue avec la caméra n'est plus possible pendant une trentaine de secondes.</remarks>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.Connecte">
+	<summary>
+  Recherche une chaîne localisée semblable à Connecté à.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.ConnexionEnCours">
+	<summary>
+  Recherche une chaîne localisée semblable à Connexion en cours à.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.ConnexionImpossible">
+	<summary>
+  Recherche une chaîne localisée semblable à Connexion impossible vers .
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.Deconnecte">
+	<summary>
+  Recherche une chaîne localisée semblable à Deconnecté de.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.EnvoiMotDePasse">
+	<summary>
+  Recherche une chaîne localisée semblable à Envoi mot de passe.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.EnvoiUtilisateur">
+	<summary>
+  Recherche une chaîne localisée semblable à Envoi utilisateur.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.ErreurLogin">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur login/password.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.ErreurReception">
+	<summary>
+  Recherche une chaîne localisée semblable à Erreur pendant reception trame.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.LoginEnCours">
+	<summary>
+  Recherche une chaîne localisée semblable à Identification utlisateur.
+</summary>
+</member><member name="P:ControlesCom.My.Resources.LocTcpClient.LoginOk">
+	<summary>
+  Recherche une chaîne localisée semblable à Utilisateur connecté.
+</summary>
+</member><member name="T:ControlesCom.My.Resources.LocTcpClient">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="M:ControlesCom.ComModbus.EcrireMots(System.UInt16,System.Int16[],System.Byte)">
+	<summary>
+ Ecriture d'un tableau de mots dans l'automate
+ </summary>
+	<param name="adresse">Adresse du premier mot API</param>
+	<param name="mots">Tableau de mots a écrire dans l'API</param>
+	<param name="numEscl">Numéro de l'esclave destinataire si nécessaire</param>
+	<returns>TRUE si l'écriture s'est bien déroulée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComModbus.LireMots(System.UInt16,System.Int16[]@,System.Byte)">
+	<summary>
+ Lecture d'un tableau de mots dans l'automate
+ </summary>
+	<param name="adresse">Adresse du premier mot API</param>
+	<param name="mots">Tableau de mots dans lequel sera stocké le résultat de la lecture</param>
+	<param name="numEscl">Numéro de l'esclave destinataire si nécessaire</param>
+	<returns>TRUE si la lecture s'est bien déroulée</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpServerAscii.Connecter">
+	<summary>
+ Mise en service du serveur
+ </summary>
+	<returns>TRUE si aucun problème rencontré</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpServerAscii.Deconnecter">
+	<summary>
+ Arrêt du serveur
+ </summary>
+	<returns>TRUE si aucun problème rencontré</returns>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpServerAscii.EnvoiReponse(System.String,System.Net.Sockets.TcpClient@)">
+	<summary>
+ Envoyer une chaine ASCII au client
+ </summary>
+	<param name="envoi">Chaine a envoyer au client</param>
+	<param name="client">Identifiant du client</param>
+	<remarks></remarks>
+</member><member name="M:ControlesCom.ComTcpServerAscii.EnvoiReponse(System.Byte[],System.Int32,System.Net.Sockets.TcpClient@)">
+	<summary>
+ Envoyer un tableau d'octets au client
+ </summary>
+	<param name="trame">Tableau d'octets</param>
+	<param name="nbOctet">Nombre d'octets a envoyer</param>
+	<param name="client">Identification du client</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+classAutomateTCPIP
+</name>
+</assembly>
+<members>
+<member name="F:classAutomateTCPIP.Automate.finLecture">
+	<summary>
+ Est mis à TRUE à la fin de la scrutation.
+ </summary>
+</member><member name="F:classAutomateTCPIP.Automate.defautLecture">
+	<summary>
+ Est mis à TRUE si la lecture a foiré.
+ </summary>
+</member><member name="F:classAutomateTCPIP.Automate.defautEcriture">
+	<summary>
+ Est mis à TRUE si la l'écriture a foiré.
+ </summary>
+</member><member name="P:classAutomateTCPIP.Automate.nbMotsRTDB">
+	<summary>
+ Nombre de mots de la RTDB (Real Time DataBase)
+ </summary>
+</member><member name="M:classAutomateTCPIP.Automate.motsVersChaine(System.Int32,System.Int32)">
+	<summary>
+ Transforme une partie de la RTDB lecture en chaîne de caractères
+ </summary>
+	<returns>Une chaîne.</returns>
+</member><member name="M:classAutomateTCPIP.Automate.chaineVersMots(System.String,System.Int16)">
+	<summary>
+ Transforme une chaîne en mots dans la RTDB écriture.
+ </summary>
+</member><member name="M:classAutomateTCPIP.Automate.chaineVersMots(System.String,System.Int16,System.Int32)">
+	<summary>
+ Transforme une chaîne en mots dans la RTDB écriture.
+ </summary>
+</member><member name="M:classAutomateTCPIP.Automate.ecritMotsAutomate(System.UInt16,System.Int32)">
+	<summary>
+ Déclenche l'écriture des mots préparés dans mwEcritureAutomate
+ </summary>
+	<returns>
+ True si tout est ok.
+ La variable defautEcriture est gérée
+ ATTENTION : si la scrutation n'est pas en route, defautecriture est TRUE
+ </returns>
+</member><member name="M:classAutomateTCPIP.Automate.Bit(System.Int16,System.Int32)">
+	<summary>
+ Test l'etat d'un bit de mot (entier signé 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<returns>Etat du bit</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.SetBit(System.Int16@,System.Int32,System.Boolean)">
+	<summary>
+ Set ou Reset d'un bit de mot (entier signé de 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé de 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<param name="etat">Etat du bit</param>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.LoByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids faible d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids faible</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.HiByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids FORT d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids FORT</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.ByteToWord(System.Byte,System.Byte)">
+	<summary>
+ Constituation d'un mot a partir de deux octets
+ </summary>
+	<param name="hi">Octet de poids faible</param>
+	<param name="lo">Octet de poids FAIBLE</param>
+	<returns>Mot signé de 16 bits</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.ByteToString(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau d'octets.
+ </summary>
+	<param name="tableau">Tableau d'octets</param>
+	<param name="debut">Premier octet de la chaine a extraire</param>
+	<param name="longueur">Nombre d'octets a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.WordToString(System.Int16[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau de mots (int16).
+ </summary>
+	<param name="tableau">Tableau de mots (int16)</param>
+	<param name="debut">Premier mot de la chaine a extraire</param>
+	<param name="longueur">Nombre de mots a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.StringToWord(System.String,System.Int16[]@,System.Int32,System.Int32)">
+	<summary>
+ Ecriture d'une chaine de caratere dans un tableau de mots
+ </summary>
+	<param name="chaine">Chaine de caractére</param>
+	<param name="tableau">Tableau de mots</param>
+	<param name="debut">Premier mot a utiliser</param>
+	<param name="longueur">Nombre de mots a utiliser</param>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.Hex2(System.Byte)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 2 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.Hex4(System.Int16)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 4 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.Automate.Hex8(System.Int32)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 8 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="T:classAutomateTCPIP.Automate">
+	<summary>
+ Apporte les interfaçages nécessaires à la lecture périodique d'un automate avec MODBUS TCP/IP.
+ </summary>
+</member><member name="P:classAutomateTCPIP.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:classAutomateTCPIP.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="T:classAutomateTCPIP.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member><member name="F:classAutomateTCPIP.automateUnity.finLecture">
+	<summary>
+ Est mis à TRUE à la fin de la scrutation.
+ </summary>
+</member><member name="F:classAutomateTCPIP.automateUnity.defautLecture">
+	<summary>
+ Est mis à TRUE si la lecture a m*rdé.
+ </summary>
+</member><member name="F:classAutomateTCPIP.automateUnity.defautEcriture">
+	<summary>
+ Est mis à TRUE si la l'écriture a m*rdé.
+ </summary>
+</member><member name="P:classAutomateTCPIP.automateUnity.fichierXSY">
+	<summary>
+ Définit un fichier d'export UNITY pro
+ </summary>
+</member><member name="P:classAutomateTCPIP.automateUnity.filtreNomsVariables">
+	<summary>
+ Définit un filtre d'import des variables par préfixe
+ </summary>
+</member><member name="P:classAutomateTCPIP.automateUnity.variableUnity(System.String)">
+	<summary>
+ Renvoie ou règle une variable Unity dans la RTDB (mwEcriture ou mwLecture)
+ </summary>
+</member><member name="P:classAutomateTCPIP.automateUnity.nbMotsRTDB">
+	<summary>
+ Nombre de mots de la RTDB (Real Time DataBase)
+ </summary>
+</member><member name="P:classAutomateTCPIP.automateUnity.periodeScrutationMs">
+	<summary>
+ Période de scrutation (lecture écriture) en ms
+ </summary>
+</member><member name="M:classAutomateTCPIP.automateUnity.lireXSYEtCreerVariables">
+	<summary>
+ Lit le fichier d'export Unity et crée les tableaux de scrutation des variables localisées
+ </summary>
+	<returns>"OK" ou "Fail"</returns>
+</member><member name="M:classAutomateTCPIP.automateUnity.motsVersChaine(System.Int32,System.Int32)">
+	<summary>
+ Transforme une partie de la RTDB lecture en chaîne de caractères
+ </summary>
+	<returns>Une chaîne.</returns>
+</member><member name="M:classAutomateTCPIP.automateUnity.chaineVersMots(System.String,System.Int16)">
+	<summary>
+ Transforme une chaîne en mots dans la RTDB écriture.
+ </summary>
+</member><member name="M:classAutomateTCPIP.automateUnity.ecritMotsAutomate(System.Int32,System.Int32)">
+	<summary>
+ Déclenche l'écriture des mots préparés dans mwEcritureAutomate
+ </summary>
+	<returns>
+ True si tout est ok.
+ La variable defautEcriture est gérée
+ </returns>
+</member><member name="M:classAutomateTCPIP.automateUnity.ecritMotsAutomate(System.UInt16,System.Int32)">
+	<summary>
+ Déclenche l'écriture des mots préparés dans mwEcritureAutomate
+ </summary>
+	<returns>
+ True si tout est ok.
+ La variable defautEcriture est gérée
+ </returns>
+</member><member name="M:classAutomateTCPIP.automateUnity.ecritMotsAutomate(System.String,System.Int32)">
+	<summary>
+ Demande à écrire des mots. On passe le nom de la variable suivi du nombre de mots
+ </summary>
+</member><member name="M:classAutomateTCPIP.automateUnity.adresseRTDBParNomDeVariable(System.String)">
+	<summary>
+ Rend l'adresse dans la RTDB pour un nomVariable donné
+ </summary>
+	<returns>Adresse dans MW ou -1 si le nom n'a pas été trouvé"</returns>
+</member><member name="M:classAutomateTCPIP.automateUnity.Bit(System.Int16,System.Int32)">
+	<summary>
+ Test l'etat d'un bit de mot (entier signé 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<returns>Etat du bit</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.SetBit(System.Int16@,System.Int32,System.Boolean)">
+	<summary>
+ Set ou Reset d'un bit de mot (entier signé de 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé de 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<param name="etat">Etat du bit</param>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.SetBit(System.String@,System.Int32,System.Boolean)">
+	<summary>
+ Set ou Reset d'un bit de mot (entier signé de 16 bits)
+ </summary>
+	<param name="variableUnity">Nom de variable Unity</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<param name="etat">Etat du bit</param>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.LoByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids faible d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids faible</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.HiByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids FORT d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids FORT</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.ByteToWord(System.Byte,System.Byte)">
+	<summary>
+ Constituation d'un mot a partir de deux octets
+ </summary>
+	<param name="hi">Octet de poids faible</param>
+	<param name="lo">Octet de poids FAIBLE</param>
+	<returns>Mot signé de 16 bits</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.ByteToString(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau d'octets.
+ </summary>
+	<param name="tableau">Tableau d'octets</param>
+	<param name="debut">Premier octet de la chaine a extraire</param>
+	<param name="longueur">Nombre d'octets a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.WordToString(System.Int16[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau de mots (int16).
+ </summary>
+	<param name="tableau">Tableau de mots (int16)</param>
+	<param name="debut">Premier mot de la chaine a extraire</param>
+	<param name="longueur">Nombre de mots a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.StringToWord(System.String,System.Int16[]@,System.Int32,System.Int32)">
+	<summary>
+ Ecriture d'une chaine de caratere dans un tableau de mots
+ </summary>
+	<param name="chaine">Chaine de caractére</param>
+	<param name="tableau">Tableau de mots</param>
+	<param name="debut">Premier mot a utiliser</param>
+	<param name="longueur">Nombre de mots a utiliser</param>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.Hex2(System.Byte)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 2 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.Hex4(System.Int16)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 4 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classAutomateTCPIP.automateUnity.Hex8(System.Int32)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 8 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="T:classAutomateTCPIP.automateUnity">
+	<summary>
+ Apporte les interfaçages nécessaires à la lecture périodique d'un automate avec MODBUS TCP/IP.
+ Cette version autorise la lecture de variables localisées de Unity, y compris les tableaux,
+ les structures, les structures contenant des tableaux ou les tableaux de structures...
+ </summary>
+</member>
+</members>
+</doc>

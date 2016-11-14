@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A5DB80B-E557-4D4C-87DE-269EA1A6D5D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>XS156LinearTesterPole.My.MyApplication</StartupObject>
+    <RootNamespace>XS156LinearTesterPole</RootNamespace>
+    <AssemblyName>XS156 Linear Tester Pole</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>XS156 Linear Tester Pole.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>XS156 Linear Tester Pole.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\YEILD!.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>19F1FD455E97DEC6BAFAD44E270225A44ED19AF5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>XS156LinearTesterPole_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="classAutomateTCPIP">
+      <HintPath>.\classAutomateTCPIP.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlesCom, Version=1.0.3205.14839, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ControlesCom.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.4.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.PowerPacks.Printing" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="bdd_badgesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_badgesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataacquisitionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataacquisitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DialogConfig.Designer.vb">
+      <DependentUpon>DialogConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogNewOrder.Designer.vb">
+      <DependentUpon>DialogNewOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogNewOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain .Designer.vb">
+      <DependentUpon>FormMain .vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HazardEventsNamesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HazardEventsNamesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ositrack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogConfig.resx">
+      <DependentUpon>DialogConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogNewOrder.resx">
+      <DependentUpon>DialogNewOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain .resx">
+      <DependentUpon>FormMain .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ositrack.resx">
+      <DependentUpon>ositrack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bdd_badgesDataSet.xsc">
+      <DependentUpon>bdd_badgesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_badgesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_badgesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_badgesDataSet.xss">
+      <DependentUpon>bdd_badgesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataacquisitionDataSet.xsc">
+      <DependentUpon>dataacquisitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataacquisitionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataacquisitionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataacquisitionDataSet.xss">
+      <DependentUpon>dataacquisitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HazardEventsNamesDataSet.xsc">
+      <DependentUpon>HazardEventsNamesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HazardEventsNamesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HazardEventsNamesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HazardEventsNamesDataSet.xss">
+      <DependentUpon>HazardEventsNamesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="XS156LinearTesterPole_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YEILD!.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-forward_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disc-media_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-closed_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telemecanique Sensors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-forward_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-forward_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-forward_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disc-media_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disc-media_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disc-media_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-closed_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-closed_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-closed_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bdd_badges.mdb" />
+    <Content Include="HazardEventsNames.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\EjectNormalRed.png" />
+    <None Include="Resources\BarCode.jpg" />
+    <None Include="Resources\Stop1PressedBlue.png" />
+    <None Include="Resources\Play1Pressed.png" />
+    <None Include="Resources\control_play_blue.png" />
+    <None Include="Resources\control_stop_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Bdd_badgesDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\</Value>
+    </Setting>
+    <Setting Name="bdd_badgesConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bdd_badges.mdb;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bdd_badges.mdb;Persist Security Info=True</Value>
+    </Setting>
+    <Setting Name="PLCIpAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.184.65.175</Value>
+    </Setting>
+    <Setting Name="RFIDIpAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.184.65.169</Value>
+    </Setting>
+    <Setting Name="XS156dataacquisitionConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=wxsg103030118d.apa;User Id=capture;password=capture;Persist Security Info=True;database=dataacquisition&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=wxsg103030118d.apa;User Id=capture;password=capture;Persist Security Info=True;database=dataacquisition</Value>
+    </Setting>
+    <Setting Name="EquipmentNameHiPot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Linear Tester HiPot</Value>
+    </Setting>
+    <Setting Name="EquipmentNameFinal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Linear Tester Final</Value>
+    </Setting>
+    <Setting Name="IPAddressOfDataAcquisitionServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WXSG103030118D.apa</Value>
+    </Setting>
+    <Setting Name="ModbusAddressLoading" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ModbusAddressUnloading" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="LinearTesterHiPotName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Linear Tester Loading</Value>
+    </Setting>
+    <Setting Name="LinearTesterFinalName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Linear Tester Final</Value>
+    </Setting>
+    <Setting Name="HazardEventsNamesConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\HazardEventsNames.mdb;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\HazardEventsNames.mdb;Persist Security Info=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

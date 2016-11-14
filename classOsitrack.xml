@@ -1,0 +1,246 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+classOsitrack
+</name>
+</assembly>
+<members>
+<member name="M:classOsitrack.Ositrack.stationOsitrack.construitVAT1">
+	<summary>
+ Construit la table d'attribution des variables du TAG.
+ La construction a lieu dans le tableau MWEcritureOsitrack, au début.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.construitVAT2(System.Byte)">
+	<summary>
+ Construit la table d'attribution des variables du TAG.
+ La construction a lieu dans le tableau MWEcritureOsitrack, au début.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.litVAT(System.Boolean)">
+	<summary>
+ Construit la table d'attribution des variables du TAG en mémoire
+ La construction a lieu à partir du tableau MWLectureOsitrack qui est lu pour l'occasion.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.numeroMotVariableVAT(System.Int32)">
+	<summary>
+ Donne l'index, dans MWLectureOsitrack, du premier mot d'une variable.
+ </summary>
+	<remarks>
+ Remarques TRES importantes :
+ 1) numeroMotVariableVAT(0) donne l'index de la fin de la VAT +1 puisque c'est l'adresse 
+ de la première variable
+ 
+ 2) numeroMotVariableVAT(VAT.nbVariables) pointe la FIN des variables (le DERNIER MOT LIBRE)
+ puisque c'est en fait le pointeur sur la PROCHAINE variable à allouer
+ 
+ </remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack._numeroMotVariableTemporaire(System.Int32)">
+	<summary>
+ On travaille dans un tableau TEMPORAIRE pour stocker les variables.
+ Pourquoi ? Parce que la VAT a une taille variable au fur et à mesure de l'entrée de variables nouvelles
+ et qu'on ne connait sa taille qu'à la fin.
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.indexVariableParNom(System.String)">
+	<summary>
+ Ramène une variable de l'espace MWLectureOsitrack et la traduit dans le bon type
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.litVariable(System.Int32,System.Boolean)">
+	<summary>
+ Ramène une variable de l'espace MWLectureOsitrack et la traduit dans le bon type
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.litVariable(System.String,System.Boolean)">
+	<summary>
+ Ramène une variable de l'espace MWLectureOsitrack et la traduit dans le bon type
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:classOsitrack.Ositrack.stationOsitrack.fermeTagVAT">
+	<summary>
+ Vide l'espace temporaire vers l'espace réel d'écriture du tag et écrit le tag.
+ </summary>
+	<remarks>
+ numeroMotVariableVAT(VAT.nbVariables) est la taille du tableau à écrire car en fait c'est le pointeur
+ sur la prochaine variable qui sera créée.
+ </remarks>
+</member><member name="M:classOsitrack.Ositrack.motsVersChaine(System.Int32,System.Int32,System.UInt16)">
+	<summary>
+ Transforme une lecture en chaîne de caractères
+ </summary>
+	<returns>Une chaîne.</returns>
+</member><member name="M:classOsitrack.Ositrack.motsVersChaine(System.Int32,System.Int32,System.Int16[])">
+	<summary>
+ Transforme une partie lecture en chaîne de caractères
+ </summary>
+	<returns>Une chaîne.</returns>
+</member><member name="M:classOsitrack.Ositrack.chaineVersMots(System.String,System.Int16,System.Int32)">
+	<summary>
+ Transforme une chaîne en mots dans la zone d'écriture.
+ </summary>
+</member><member name="M:classOsitrack.Ositrack.Bit(System.Int16,System.Int32)">
+	<summary>
+ Test l'etat d'un bit de mot (entier signé 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<returns>Etat du bit</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.SetBit(System.Int16@,System.Int32,System.Boolean)">
+	<summary>
+ Set ou Reset d'un bit de mot (entier signé de 16 bits)
+ </summary>
+	<param name="w">Mot (entier signé de 16 bits)</param>
+	<param name="b">Index du bit de 0 a 15</param>
+	<param name="etat">Etat du bit</param>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.LoByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids faible d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids faible</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.HiByte(System.Int16)">
+	<summary>
+ Retourne l'octet de poids FORT d'un mot (entier signé de 16 bits)
+ </summary>
+	<param name="word">Mot (entier signé de 16 bits)</param>
+	<returns>Octet de poids FORT</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.ByteToWord(System.Byte,System.Byte)">
+	<summary>
+ Constituation d'un mot a partir de deux octets
+ </summary>
+	<param name="hi">Octet de poids faible</param>
+	<param name="lo">Octet de poids FAIBLE</param>
+	<returns>Mot signé de 16 bits</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.ByteToString(System.Byte[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau d'octets.
+ </summary>
+	<param name="tableau">Tableau d'octets</param>
+	<param name="debut">Premier octet de la chaine a extraire</param>
+	<param name="longueur">Nombre d'octets a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.WordToString(System.Int16[],System.Int32,System.Int32)">
+	<summary>
+ Création d'une chaine de caractére a partir
+ d'un extrait de tableau de mots (int16).
+ </summary>
+	<param name="tableau">Tableau de mots (int16)</param>
+	<param name="debut">Premier mot de la chaine a extraire</param>
+	<param name="longueur">Nombre de mots a lire</param>
+	<returns>Chaine exraite</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.StringToWord(System.String,System.Int16[]@,System.Int32,System.Int32)">
+	<summary>
+ Ecriture d'une chaine de caractere dans un tableau de mots
+ </summary>
+	<param name="chaine">Chaine de caractére</param>
+	<param name="tableau">Tableau de mots</param>
+	<param name="debut">Premier mot a utiliser</param>
+	<param name="longueur">Nombre de mots a utiliser</param>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.Hex2(System.Byte)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 2 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.Hex4(System.Int16)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 4 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="M:classOsitrack.Ositrack.Hex8(System.Int32)">
+	<summary>
+ Equivalent a la fonction hex, mais retourne une chaine de 
+ 8 caractéres avec des zéros a droite
+ </summary>
+	<param name="h">Valeure a traduire en hexa</param>
+	<returns>Chaine de 4 caractéres</returns>
+	<remarks></remarks>
+</member><member name="T:classOsitrack.Ositrack">
+	<summary>
+ Apporte les interfaçages nécessaires à la communication avec OSITRACK en MODBUS TCP/IP.
+ 
+ La version 2.0 apporte le format VAT1 (Variable Allocation Table) :
+ 
+ %MW0
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ | Magic = 123                   ||    nombre de variables        |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ 
+ %MW1 et suivants
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ | Type V|    taille chaine      || Type V|    taille chaine      |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ 
+ Type = 0
+ Type = 1 : MOT
+ Type = 2 : MOTLONG
+ Type = 3 : CHAINE
+ 
+ Taille chaine en octets sur 6 bits
+ 
+ %MW? et suivants : variables à touche-touche.
+ Mot longs et chaines poids faible en tête.
+  
+ 
+ -------------------------------------------------------------------
+ 
+ ''' La version 2.1 apporte le format VAT2 (Variable Allocation Table) :
+ 
+ %MW0
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |          Magic = 246          ||    Version ou n° de projet    |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ %MW1
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |                   Nombre de variables                          |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ 
+ %MW2 et suivants
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |         Nom de la variable en MAJ complété par des espaces     |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |         Nom de la variable en MAJ complété par des espaces     |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ |Type V |           Taille de la chaine (octets)                 |
+ |---|---|---|---|---|---|---|---||---|---|---|---|---|---|---|---|
+ 
+ Type = 0
+ Type = 1 : MOT
+ Type = 2 : MOTLONG
+ Type = 3 : CHAINE
+ 
+ Taille chaine en octets sur 14 bits
+ 
+ %MW? et suivants : variables à touche-touche.
+ Mot longs et chaines poids faible en tête.
+ 
+ </summary>
+</member>
+</members>
+</doc>
