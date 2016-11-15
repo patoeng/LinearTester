@@ -131,26 +131,26 @@ Partial Class FormMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuConfig, Me.ToolStripSeparator1, Me.QuitToolStripMenuQuit})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
         'ToolStripMenuConfig
         '
         Me.ToolStripMenuConfig.Image = Global.XS156LinearTesterPole.My.Resources.Resources.applications_321
         Me.ToolStripMenuConfig.Name = "ToolStripMenuConfig"
-        Me.ToolStripMenuConfig.Size = New System.Drawing.Size(116, 22)
+        Me.ToolStripMenuConfig.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuConfig.Text = "&Config"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(113, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'QuitToolStripMenuQuit
         '
         Me.QuitToolStripMenuQuit.Image = Global.XS156LinearTesterPole.My.Resources.Resources.delete_321
         Me.QuitToolStripMenuQuit.Name = "QuitToolStripMenuQuit"
-        Me.QuitToolStripMenuQuit.Size = New System.Drawing.Size(116, 22)
+        Me.QuitToolStripMenuQuit.Size = New System.Drawing.Size(152, 22)
         Me.QuitToolStripMenuQuit.Text = "&Quit"
         '
         'Timer

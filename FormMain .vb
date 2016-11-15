@@ -85,6 +85,7 @@
     Private Sub PictureBoxPlay_Click(sender As System.Object, e As System.EventArgs) Handles PictureBoxPlay.Click
 
         If DialogNewOrder.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            ''' Disini kita buat new reference untuk traceability
             qtyLaunched = currentManufacturingOrder.manufacturingOrderQuantity
             qtySent = 0
             referenceLaunched = currentManufacturingOrder.manufacturingOrderCommercialSymbol
@@ -242,6 +243,7 @@
             If LoadingStatus = 0 Then
                 ' Go 
                 Call fillTag()
+                ''' Di sini kita modify untuk traceablity quantity update
 
                 ' Confirm to PLC
                 LoadingStatus = 1
@@ -270,6 +272,7 @@
             LoadingStatus = 0
         End If
         ' -------------------------------------------------------
+        '
 continue1:
 
 
@@ -672,4 +675,7 @@ continue2:
     End Sub
 
 
+    Private Sub LabelQtyLaunched_Click(sender As Object, e As EventArgs) Handles LabelQtyLaunched.Click
+
+    End Sub
 End Class

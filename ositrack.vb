@@ -1325,8 +1325,8 @@ fin:
     End Function
 
     Private Sub InitializeComponent()
-        Me.ComModbus = New ControlesCom.ComModbus
-        Me.BackgroundWorkerOsitrack = New System.ComponentModel.BackgroundWorker
+        Me.ComModbus = New ControlesCom.ComModbus()
+        Me.BackgroundWorkerOsitrack = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'ComModbus
@@ -1348,7 +1348,7 @@ fin:
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(239, 31)
+        Me.ClientSize = New System.Drawing.Size(235, 27)
         Me.ControlBox = False
         Me.Controls.Add(Me.ComModbus)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -1357,6 +1357,10 @@ fin:
         Me.ShowInTaskbar = False
         Me.Text = "comOsitrack - Double clic pour debug"
         Me.ResumeLayout(False)
+
+    End Sub
+
+    Private Sub Ositrack_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
