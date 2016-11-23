@@ -682,4 +682,8 @@ continue2:
     Private Sub LabelReferenceIn_Click(sender As Object, e As EventArgs) Handles LabelReferenceIn.Click
 
     End Sub
+
+    Private Sub LabelQtySent_Click(sender As Object, e As EventArgs) Handles LabelQtySent.Click
+
+    End Sub
 End Class
