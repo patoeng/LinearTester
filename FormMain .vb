@@ -365,7 +365,7 @@ continue2:
     End Sub
 
     Private Sub PictureBoxStop_Click(sender As System.Object, e As System.EventArgs) Handles PictureBoxStop.Click
-
+        ''' Disini kita check bila Final belum close
         stopWorkOrderInput = True
 
     End Sub
@@ -676,6 +676,10 @@ continue2:
 
 
     Private Sub LabelQtyLaunched_Click(sender As Object, e As EventArgs) Handles LabelQtyLaunched.Click
+
+    End Sub
+
+    Private Sub LabelReferenceIn_Click(sender As Object, e As EventArgs) Handles LabelReferenceIn.Click
 
     End Sub
 End Class
