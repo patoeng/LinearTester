@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>XS156LinearTesterPole.My.MyApplication</StartupObject>
     <RootNamespace>XS156LinearTesterPole</RootNamespace>
-    <AssemblyName>XS156 Linear Tester Pole</AssemblyName>
+    <AssemblyName>XS156 Linear Tester Pole Traceability</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -40,7 +40,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>XS156 Linear Tester Pole.xml</DocumentationFile>
+    <DocumentationFile>XS156 Linear Tester Pole Traceability.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -50,7 +50,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>XS156 Linear Tester Pole.xml</DocumentationFile>
+    <DocumentationFile>XS156 Linear Tester Pole Traceability.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -202,7 +202,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bdd_badgesDataSet.xsc">
       <DependentUpon>bdd_badgesDataSet.xsd</DependentUpon>
     </None>
@@ -552,6 +554,15 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XS156Client35\XS156Client35\XS156Client35.csproj">
+      <Project>{6a35ead5-f25d-48a1-a12c-91516f1c31c8}</Project>
+      <Name>XS156Client35</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

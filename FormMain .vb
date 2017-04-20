@@ -17,12 +17,19 @@
     Dim AckInputHazard As Boolean = False
     Dim AckHiPotHazard As Boolean = False
     Dim AckFinalHazard As Boolean = False
-
+    Public WithEvents Xs156Client As XS156Client35.Xs156Client
     Dim myPrinter As New Compatibility.VB6.Printer
 
     Private Sub FormMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
+        Try
+
+            Xs156Client = New XS156Client35.Xs156Client
+            'Xs156Client.StartUpdater()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
         Try
             ' Set correct Ip address
@@ -90,8 +97,7 @@
             qtySent = 0
             referenceLaunched = currentManufacturingOrder.manufacturingOrderCommercialSymbol
             paletteNumber = 1
-
-            ' Keep a trace
+           
             ' Find me
             Try
                 For Each oneEquipment As dataacquisitionDataSet.equipmentsRow In MyDataacquisitionDataSet.equipments
@@ -111,6 +117,7 @@
                         WorkordersTableAdapter.Update(MyDataacquisitionDataSet.workorders)
                         Exit For
                     End If
+                    '''Disini kita buat new reference untuk traceability
                 Next
             Catch ex As Exception
                 MessageBox.Show("Error creating the workorder record : " & ex.Message)
@@ -166,6 +173,7 @@
             LabelOrderIn.Text = currentManufacturingOrder.manufacturingOrderId
             PictureBoxStop.Visible = True
             PictureBoxPlay.Visible = False
+          
         Else
             LabelReferenceIn.Text = "Waiting..."
             LabelQtySent.Text = "0"
@@ -243,7 +251,7 @@
             If LoadingStatus = 0 Then
                 ' Go 
                 Call fillTag()
-                ''' Di sini kita modify untuk traceablity quantity update
+                '''Di sini kita modify untuk traceablity quantity update
 
                 ' Confirm to PLC
                 LoadingStatus = 1
@@ -299,6 +307,8 @@ continue1:
                 Dim orderOutput As String
                 ' From W91 for 4 words station 1
                 orderOutput = MyOsitrack.motsVersChaine(91, 4, 1)
+                Dim referenceOut As String
+                referenceOut = MyOsitrack.motsVersChaine(0, 8, 1)
                 If currentOutputWorkOrder Is Nothing OrElse currentOutputWorkOrder.workOrderManufacturingOrder <> orderOutput Then
                     ' Not existing or not the good one : create it
                     Try
@@ -336,6 +346,25 @@ continue1:
                         LabelOutputStatus.Text = "Error updating the workorder record on output : " & ex.Message
                     End Try
                 End If
+                ''' Disini Traceability Insert
+                ''' 
+                Try
+                    If Not Xs156Client Is Nothing Then
+                        If Xs156Client.GetCurrentOrderNumber() <> orderOutput Then
+                            If Not Xs156Client.LoadByOrderNumber(orderOutput) Then
+                                Xs156Client.StartNewTrackingProcess(referenceOut, 48, orderOutput)
+                            End If
+                        End If
+                        If Xs156Client.GetCurrentOrderNumber() = orderOutput Then
+                            Xs156Client.UpdateOutputQuantity(MyOsitrack.stationsOsitrack(1).mwLectureOsitrack(87))
+                            Xs156Client.UpdateRejectedQuantity(MyOsitrack.stationsOsitrack(1).mwLectureOsitrack(88))
+                            '' Xs156Client.SetOutputQuantity(currentOutputWorkOrder.workOrderQuantityOk)
+                            '' Xs156Client.SetRejectQuantity(currentOutputWorkOrder.workOrderQuantityNok)
+                        End If
+                    End If
+                Catch
+                    MessageBox.Show("Traceability Error", Err.ToString())
+                End Try
 
                 ' Display product status and print defaults and record measurements
                 Call present(1)
@@ -684,6 +713,22 @@ continue2:
     End Sub
 
     Private Sub LabelQtySent_Click(sender As Object, e As EventArgs) Handles LabelQtySent.Click
+
+    End Sub
+
+    Private Sub Xs156Client_ExceptionEvent(info As String) Handles Xs156Client.ExceptionEvent
+        '' MessageBox.Show(info)
+    End Sub
+
+    Private Sub Xs156Client_TrackingDataBagUpdatedEvent(data As XS156Client35.Models.TrackingDataBag) Handles Xs156Client.TrackingDataBagUpdatedEvent
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        qtySent += 4
+    End Sub
+
+    Private Sub MenuStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip.ItemClicked
 
     End Sub
 End Class
